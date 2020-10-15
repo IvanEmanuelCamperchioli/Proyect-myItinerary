@@ -1,0 +1,770 @@
+html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    background-color: #ffffff;
+    width: 100vw;
+}
+
+img {
+    height: 40vh;
+    width: 30vw;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+}
+
+@font-face {
+    font-family: quick;
+    src: url(Quicksand-Regular.ttf)
+}
+
+.site-p {
+    font-family: quick;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.itiner {
+    font-family: quick;
+    font-size: 20px;
+    margin-right: 36vw;
+    font-weight: bold;
+}
+
+.explorer {
+    height: auto;
+    width: 6vw;
+}
+
+.explorer:hover {
+    background: white;
+    border-radius: 100%;
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    height: 110px;
+    min-height: 80px;
+    background-image: linear-gradient(#0000e4, #000066);
+}
+
+.logo {
+    width: 30vw;
+    height: auto;
+}
+
+.collapse {
+    flex-grow: 0;
+}
+
+.menu {
+    height: auto;
+    width: 4vw;
+    min-width: 20px;
+}
+
+.user {
+    border-radius: 50%;
+    height: auto;
+    width: 5.5vw;
+    min-width: 40px;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0vw;
+    margin-bottom: 0vh;
+}
+
+.contImagen {
+    background: red;
+    height: 50vh;
+    width: 50vw;
+}
+
+#contenedorMain {
+    display: flex;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p {
+    padding-top: 15vh;
+}
+
+.costado {
+    margin-left: 0;
+    padding-left: 0;
+    position: relative;
+    right: 300px;
+    width: 40vw;
+}
+
+.carousel-item {
+    transition: 1s;
+}
+
+.carousel {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+div.carousel-item.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../images/slider-buttons-arrow-left.png');
+    border-radius: 100%;
+    height: 3vw;
+    width: 3vw;
+    min-width: 33px;
+    min-height: 33px;
+    opacity: .9;
+}
+
+.carousel-control-next-icon {
+    background-image: url('../images/slider-buttons-arrow-right.png');
+    border-radius: 100%;
+    height: 3vw;
+    width: 3vw;
+    min-width: 33px;
+    min-height: 33px;
+    opacity: .9;
+}
+
+.display {
+    display: inline-flex;
+    box-shadow: 5px 5px 6px rgba(0,0,0,0.12), 5px 5px 6px rgba(0,0,0,0.24);
+    background-position: center; 
+    background-size: cover; 
+    margin: 7px 7px 7px 7px;
+    width: 40%;
+    height: 47%;
+}
+
+@font-face {
+    font-family: monserrat;
+    src: url(Montserrat-Light.ttf)
+}
+
+.titulo {
+    font-size: 25px;
+    height: 6vh;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(161, 185, 115, 0.68);
+    margin-top: 37%;
+    font-family: monserrat;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.titulo:hover {
+    cursor: default;
+    color: rgb(255, 255, 255);
+    background-color: rgba(160, 185, 115, 0.925);
+}
+
+
+.radio {
+    border-radius: 100%;
+}
+
+.btn {
+    transition: 1s;
+    padding: 0;
+}
+
+.btn-secondary {
+    position: relative;
+    top: 0.5vh;
+    left: 1.5vw;
+    background-color: white;
+    border-color: white;
+    cursor: none;
+}
+
+.btn-secondary:focus {
+    background-color: white;
+    border-color: white;
+}
+
+.btn:focus {
+    box-shadow: 5px 7px 6px rgba(0,0,0,0.12), 5px 7px 6px rgba(0,0,0,0.24);
+}
+
+
+ @media screen and (max-width: 767px) {
+    .menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .titulo {
+        font-size: 25px;
+        height: 6vh;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(161, 185, 115, 0.68);
+        margin-top: 39%;
+        font-family: monserrat;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+    }
+    .logo {
+        width: 26vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .textoCiudad {
+        font-size: 12px!important;
+    }
+    .takeoff {
+        max-height: 60vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .titulo {
+        font-size: 25px;
+        height: 6vh;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(161, 185, 115, 0.68);
+        margin-top: 45%;
+        font-family: monserrat;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+    }
+    .logo {
+        width: 43vw;
+        height: auto;
+    }
+    .display {
+        height: 45%;
+        margin-bottom: 0px;
+    }
+    .carousel-item {
+        height: 350px;
+    }
+    .main {
+        max-height: 50px;
+    }
+    .browser {
+        height: auto;
+    }
+    .browser-p {
+        font-size: 12px!important;
+    }
+    .footer h5 {
+        font-size: 10px;
+    }
+    .datosFooter {
+        font-size: 10px;
+    }
+    .letraChica {
+        font-size: 7px!important;
+    }
+    .input {
+        min-width: 30vw;
+    }
+    .textoCiudad {
+        font-size: 9px!important;
+    }
+    .takeoff {
+        max-height: 40vh;
+    }
+    .card p {
+        font-size: 15px!important;
+    }
+
+    .titleImgItinerary {
+        font-size: 40px!important;
+        height: 10vh!important;
+    }
+
+    .imgItineray {
+        max-height: 180px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-toggler-icon {
+        display: none;
+    }
+    .navbar-toggler {
+        display: none;
+    }
+    .navbar-nav .dropdown-menu {
+         position: absolute;
+    }
+}    
+
+
+@media screen and (max-width: 500px) {
+    .titulo {
+        font-size: 15px;
+        height: 4vh;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(161, 185, 115, 0.68);
+        margin-top: 57%;
+        font-family: monserrat;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+    }
+    .site p {
+        margin: 2% 5% 2% 10%;
+        font-size: 15px;
+    }
+    .logo {
+        width: 50vw;
+        height: auto;
+
+    }
+    .display {
+        height: 45%;
+        margin-bottom: 0px;
+    }
+    .carousel-item {
+        height: 300px;
+    }
+    .browser {
+        height: auto;
+    }
+    .browser-p {
+        font-size: 8px!important;
+    }
+    .site-p {
+        font-size: 10px!important;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .footer div{
+        min-height: 85px;
+    }
+
+    .input {
+        min-width: 45vw;
+        font-size: 12px!important;
+    }
+    .takeoff {
+        max-height: 35vh;
+    }
+    .textoCiudad {
+        font-size: 7px!important;
+    }
+    
+    .aerolineas {
+        min-height: 34px;
+    }
+
+    .aerolineas img {
+        min-width: 65px;
+    }
+
+    .card p {
+        font-size: 10px!important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .etiquetaImg {
+        height: 13vh!important;
+        min-width: 40vw!important;
+    }
+}
+
+.browser {
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to right, #52d0f3cb,  #73d9f52f);
+    margin: 5vh 0vw 5vh 0vw;
+    border-radius: 50px;
+}
+
+@font-face {
+    font-family: baloo;
+    src: url(BalooTamma2-Regular.ttf);
+}
+
+.browser-p {
+    font-family: baloo;
+    color: rgb(0, 0, 0);
+    text-shadow: 1.5px 1.5px white;
+    font-size: 23px;
+}
+
+.icono-Home {
+    background-image: url('../images/home-icon-001.jpg');
+    min-width: 45px;
+    min-height: 45px;
+    height: 6.5vw;
+    width: 6.5vw;
+    background-position: center; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 2vh 0;
+}
+
+.icono-Home:hover {
+    background-image: url('../images/home-icon.jpg');
+}
+
+.navbar-nav .dropdown-menu {
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.12), 2px 2px 6px rgba(0,0,0,0.24);
+}
+
+.dropdown-menu.show {
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.12), 2px 2px 6px rgba(0,0,0,0.24);
+}
+
+.takeoff {
+    background-image: url('../images/takeoff2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    overflow: hidden;
+    overflow: scroll;
+
+}
+
+.etiquetaImg:hover {
+    box-shadow: 1px 1px 5px black;
+    border: 1.2px solid rgb(0, 0, 0);
+}
+
+.etiquetaImg {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.datosFooter:hover {
+    color: #ffffff
+}
+
+.back {
+    background-image: url('../images/back.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    min-width: 40px;
+    min-height: 40px;
+    height: 7vw;
+    width: 7vw;
+}
+
+.back:hover {
+    background-image: url('../images/back-001.jpg');
+}
+
+.noItinerary {
+    height: 40vw; 
+    width: 80vw; 
+    margin-bottom: 10vh; 
+    margin-top: 5vh;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../images/fondoItinerario.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: Poiret;
+    src: url("PoiretOne-Regular.ttf");
+}
+
+.available {
+    font-family: Poiret;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Bebas;
+    src: url("BebasNeue-Regular.ttf");
+}
+
+.noItinerary h5 {
+    font-family: Bebas;
+}
+
+.imgItineray {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    background-color: #002e3b;
+    box-shadow: 1px 8px 10px rgba(0,0,0,0.12), 1px 8px 10px rgba(0,0,0,0.24);
+    width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 60%;
+    max-width: 70vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+}
+
+.container .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: all 0.4s;
+    margin: 5vh 0 5vh 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: linear-gradient(226deg, rgb(27, 95, 73) 48%, rgb(29, 114, 68) 100%);
+}
+
+.card p {
+    font-family: quick;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    margin: 5px;
+}
+
+.container .card:hover{
+    transform: translateY(-8px);
+    box-shadow: 2px 12px 16px rgba(0, 0, 0, 0.459);
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(Oswald-VariableFont_wght.ttf);
+}
+
+.titleImgItinerary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 60px;
+    text-align: center;
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3)); 
+    height: 16vh;
+    letter-spacing: 10px;
+    font-family: oswald;
+    font-weight: lighter;
+}
+
+.containerProfile {
+    position: relative;
+}
+
+.profile {
+    background-position: center;
+    background-size: cover; 
+    min-width: 78px;
+    min-height: 78px;
+    width: 12vw;
+    height: 12vw; 
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    padding: 5px;
+    margin-top: 5vh;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.profile:hover {
+    opacity: 0.7;
+}
+
+.middleDiv {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.middleDiv:hover {
+    opacity: 1;
+}
+
+.ProfileName {
+    background-color: #419742;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+.signUp input {
+    min-width: 230px;
+}
+
+@media screen and (max-width: 965px) {
+    .noItinerary h5 {
+        font-size: 25px!important;
+        max-width: '450px'
+    }
+    .ProfileName {
+        font-size: 10px;
+        padding: 10px 15px;
+    }
+    .signUp label, input {
+        font-size: 12px;
+    }
+    .activityMain {
+        flex-direction: column;
+    }
+    .activity {
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .ProfileName {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+    .btn-secondary {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .noItinerary h5 {
+        font-size: 15px!important;
+    }
+    .british {
+        margin: 10px 0px;
+    }
+    .ProfileName {
+        padding: 5px 7px!important;
+        font-size: 8px!important;
+    }
+    .googleButton {
+        min-width: 230px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .btn-secondary {
+        font-size: 10px;
+    }
+    .signUp {
+        padding-right: 40vw;
+    }
+    .signUp select, p, h4, .button {
+        min-width: 230px;
+    }
+
+}
+
+.hashtag {
+    color: #0000ff!important;
+    font-weight: bold;
+    background: white;
+    border-radius: 10px;
+    padding: 0 4px;
+    max-height: 30px;
+    text-align: center;
+}
+
+.activity {
+    text-align: center;
+    height: 40vh; 
+    max-width: 30vw; 
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+    margin: 5px
+}
+
+.activity div {
+    background-size: cover; 
+    background-position: center;
+    min-width: 30vw;
+    height: 100%;
+}
+
+.titleActivity {
+    width: 30vw;
+    margin: 5px;
+    color: whitesmoke;
+    font-family: pro;
+    font-size: 5vh;
+}
+
+.titleActivity h4 {
+    margin-left: 5vw;
+}
+
+.activity div:hover {
+    transition: all 0.198s;
+    transform: scale(1.06,1.06);
+}
+
+.like {
+    margin-left: 2vw; 
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    width: 4vw; 
+    height: 4vw;
+}
+
+.like:focus {
+    outline: none;
+}
+
