@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { Collapse, Navbar, NavbarToggler, Nav,  UncontrolledDropdown, DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Dropdown
- } from 'reactstrap'
+import  { Collapse, Navbar, NavbarToggler, Nav,  UncontrolledDropdown, DropdownToggle,
+          DropdownMenu,
+          DropdownItem,
+          Dropdown
+        } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-const Menu = (props) => {
+const Menu = (props) => {   
 
   const [isOpen] = useState(true)
 
@@ -15,7 +15,7 @@ const Menu = (props) => {
 
   const toggle = () => setDropdownOpen(prevState => !prevState)
 
-  const toggle1 = () => setDropdownOpen(prevState => !prevState)
+  // const toggle1 = () => setDropdownOpen(prevState => !prevState)
 
 
   return (
@@ -55,7 +55,7 @@ const Menu = (props) => {
       </Dropdown> 
       
       <Navbar color="faded" light expand="md">
-        <NavbarToggler toggle={toggle1} />
+        <NavbarToggler toggle={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="md-auto" navbar>
             <UncontrolledDropdown nav inNavbar>

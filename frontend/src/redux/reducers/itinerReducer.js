@@ -1,5 +1,3 @@
-import Itineraries from "../../components/Itineraries"
-
 const initialState = {
     imgItineraries: [],
     itineraries: [],
