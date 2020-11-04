@@ -4,7 +4,6 @@ const activitiesController = {
 
     loadActivities: (req, res) => {
         const {titleActivity, imgActivity, itineraryId} = req.body
-        console.log(req.body)
 
 
         const newActivity = new Activity({

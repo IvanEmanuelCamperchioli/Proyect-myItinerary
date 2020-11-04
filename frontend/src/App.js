@@ -16,7 +16,6 @@ class App extends React.Component {
   render() {
 
     if (this.props.tokenLogin) {
-      console.log('estoy logueado')
       var rutas = (
         <Switch>
         <Route path="/home" component={Home} />

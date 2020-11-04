@@ -21,7 +21,7 @@ routes.route('/itineraries/:id')
 .get(itinerController.getItinerariesById)
 .put(itinerController.putComment)
 
-routes.route('/comments/:id')
+routes.route('/comments/:id/:toDel')
 .delete(itinerController.deleteComment)
 
 routes.route('/activities')

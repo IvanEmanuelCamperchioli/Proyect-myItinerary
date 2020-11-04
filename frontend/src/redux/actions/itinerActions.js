@@ -34,12 +34,14 @@ const itinerActions = {
         }
     },
 
-    removeComent: (commentRemove) => {
+    removeComent: (commentRemove, idItinerary) => {
         return async (dispatch, getState) => {
-            const response = await axios.delete(`${route.localRoute}/api/comments/${commentRemove.map(coment => {return coment.coments})}`)
-            console.log(commentRemove.map(coment => {return coment.coments}))
+            const response = await axios.delete(`${route.localRoute}/api/comments/${commentRemove.id}/${idItinerary}`)
+            dispatch({
+                type:'GET_ITINERARIES',
+                payload: response.data.comment
+            })
         } 
-
     }
 }
 

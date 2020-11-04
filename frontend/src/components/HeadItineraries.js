@@ -6,7 +6,7 @@ class HeadItineraries extends React.Component {
     render() {
 
         return (
-            this.props.imgItineraries.map(image => {
+            this.props.images.map(image => {
                 const imagenItinerary = require(`../images/itinerarios/${image.imageURL}`)
                 return (
                     <div key={image.imageURL} className="imgItineray" style={{backgroundImage: `url(${imagenItinerary})`
@@ -19,10 +19,10 @@ class HeadItineraries extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        imgItineraries: state.itinerReducer.imgItineraries
-    }
-}
+// const mapStateToProps = state => {
+//     return {
+//         imgItineraries: state.itinerReducer.imgItineraries
+//     }
+// }
 
-export default connect(mapStateToProps)(HeadItineraries)
+export default HeadItineraries

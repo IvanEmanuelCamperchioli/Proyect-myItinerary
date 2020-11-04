@@ -46,16 +46,13 @@ const itinerController = {
         
         res.json({
                 success: true,
-                comment: idCiudad,
-                
+                comment: idCiudad
             })
     },
 
     deleteComment: async (req, res) => {
-        const {id} = req.params
-        console.log(id)
-        await Itinerary.findOneAndRemove({coments: id})
-        res.json({success: true})
+        const {id, toDel} = req.params
+        const idToDelete = await Itinerary.findOne({'coments.id': id})
     }
 }
 

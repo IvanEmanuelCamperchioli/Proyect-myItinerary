@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken')
 
 const userController = {
     loadUser: async (req, res) => {
-        console.log('principio controlador')
         const {urlPick, user, password, firstName, lastName, email, country} = req.body
         const passHashed = bcryptjs.hashSync(password, 10)
         const userExists = await User.findOne({user})
@@ -26,10 +25,8 @@ const userController = {
                         firstName: newUser.firstName,
                         urlPick: newUser.urlPick
                     })
-                    console.log(token)
                 }
             })
-            console.log('fin controlador')
         }
     },
 

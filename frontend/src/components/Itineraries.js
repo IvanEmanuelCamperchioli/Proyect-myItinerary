@@ -4,44 +4,41 @@ import { Button } from 'reactstrap'
 import { connect } from 'react-redux'
 import Comments from './Comments'
 import itinerActions from '../redux/actions/itinerActions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import ViewComment from './ViewComment'
 
 class Itineraries extends React.Component {
 
     state = {
         viewMore: false,
-        comentario: []
+        show: false
     }
 
-    componentDidMount() {
-        this.props.itinerary.coments.map(comentario => {
-            return (
-                this.setState({
-                    comentario: comentario})
-            )
-        })
+
+    showTrash = () => {
+        this.setState({ show: true })
+    }
+
+    noTrash = () => {
+        this.setState({ show: false })
+    }
+
+    removeComent = e => {
+        e.preventDefault()
+        const commentRemove = this.props.itinerary.coments
+        this.props.removeComent(commentRemove)
     }
 
 
     render() {
 
-        const idItinerary = this.props.idItinerary
         
         const viewMore = e => {
             e.preventDefault()
             this.setState({
                 viewMore: !this.state.viewMore
             })
-        }
-
-        console.log(this.state.comentario)
-        const removeComent = e => {
-            e.preventDefault()
-            const idRemove = e.target.value
-            console.log(this.props.itinerary.coments)
-            if (idRemove === this.props.itinerary._id & this.props.itinerary.coments === this.state.comentario) {
-                const commentRemove = this.props.itinerary.coments
-                this.props.removeComent(commentRemove)
-            }
         }
 
         const like = require('../images/likeYes.jpg')
@@ -78,18 +75,14 @@ class Itineraries extends React.Component {
                     {this.state.viewMore && <Activity idItinerary={this.props.itinerary._id}/>}
                     <Button style={{color: 'black', margin: '0 30vw 3vh 0', maxWidth: '30vw', left: '0.8vw'}} size="lg" block onClick={viewMore}>
                     {this.state.viewMore ? 'View Less' : 'View More'}</Button>
-
-                        {this.props.itinerary.coments.map(comentario => {
-                            return (
-                                <div style={{display: 'flex'}}>
-                                    <p style={{fontSize: '15px'}}>{comentario.name} said:</p>
-                                    <p style={{fontSize: '15px'}}>{comentario.coments}</p>
-                                </div>
-                            ) 
-                        })}
-                        {this.props.tokenLogin &&
-                            <Comments idItinerary={this.props.itinerary._id} />
-                        }
+                    {this.props.itinerary.coments.map(comentario => {
+                        return (
+                            <ViewComment comentario={comentario} idItinerary={this.props.itinerary._id} />
+                        ) 
+                    })}
+                    {this.props.tokenLogin &&
+                        <Comments idItinerary={this.props.itinerary._id} />
+                    }
                 </div>
             </div>
         </div>

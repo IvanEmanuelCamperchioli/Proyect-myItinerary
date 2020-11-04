@@ -15,9 +15,6 @@ const Menu = (props) => {
 
   const toggle = () => setDropdownOpen(prevState => !prevState)
 
-  // const toggle1 = () => setDropdownOpen(prevState => !prevState)
-
-
   return (
     <div className="main">
       <Dropdown isOpen={dropdownOpen} toggle={toggle}>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Spinner } from 'reactstrap'
 import Browser from '../components/Browser'
 import HeadItineraries from '../components/HeadItineraries'
 import Itineraries from '../components/Itineraries'
@@ -9,17 +8,9 @@ import itinerActions from '../redux/actions/itinerActions'
 
 class Itinerary extends React.Component {
     
-    state = { 
-        viewMore: false,
-        idofCity: ''
-    }
-
     async componentDidMount() {
 
         const idofCity = this.props.match.params.id
-        this.setState({
-            idofCity
-        })
 
         await this.props.getItineraries(idofCity)
         await this.props.getCities(idofCity)

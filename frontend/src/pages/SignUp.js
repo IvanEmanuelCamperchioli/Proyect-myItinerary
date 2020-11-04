@@ -49,7 +49,6 @@ class SignUp extends React.Component {
             }
             const response = await this.props.createAccount(userToSignUp)
             this.setState({loading: false})
-            console.log(this.props.tokenLogin)
             if (this.props.tokenLogin) { 
                 alert(`bienvenido ${this.props.nameLogin}`)
                 this.props.history.push('/home')
@@ -58,7 +57,6 @@ class SignUp extends React.Component {
     }
 
     responseGoogle = response => {
-        console.log(response.profileObj.googleId + "1Ab")
         this.props.createAccount({
             firstName: response.profileObj.givenName,
             lastName: response.profileObj.familyName,

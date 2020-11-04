@@ -736,3 +736,23 @@ div.carousel-item.active {
     outline: none;
 }
 
+.buttonComent {
+    padding: 5px;
+    border-radius: 5px ;
+    margin-bottom: 10px;
+    top: 0;
+    opacity: none;
+    color: black;
+}
+
+.DeleteComent {
+    outline: none;
+    border: none;
+    appearance: none;
+    background: none;
+}
+
+.DeleteComent:focus {
+    outline: none;
+    border: none;
+}

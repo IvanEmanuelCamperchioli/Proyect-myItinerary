@@ -12,7 +12,6 @@ class Cities extends React.Component {
         loading: false
     }
 
-
     async componentDidMount() {
         this.setState({
             loading: true
@@ -44,7 +43,8 @@ class Cities extends React.Component {
                     <input className="input" style={{width: '30vw', height: '7vh', textAlign: 'center', fontSize: '15px', 
                         border: '1px solid #000066', margin: '7px 0px 7px 0px'}} 
                         type="text" placeholder="Search the city to visit" name="city" id="city"
-                        onChange={this.elegirCiudad} />
+                        onChange={this.elegirCiudad} 
+                    />
                 </div>
                 <div className="takeoff"  style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <ul>

@@ -46,7 +46,6 @@ class SignIn extends React.Component {
     }
 
     responseGoogle = response => {
-        console.log(response)
         this.props.userLogin({
             user: response.profileObj.familyName,
             password: "123456Ab",
